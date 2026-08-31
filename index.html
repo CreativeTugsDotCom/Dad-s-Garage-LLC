@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad's Garage LLC | Dependable Auto Repair & Vehicle Service in Gillette, WY</title>
+    <meta name="description" content="Dad's Garage LLC provides professional auto repair, vehicle maintenance, engine diagnostics, and quality used vehicle services in Gillette, Wyoming. Honest, reliable, and local. Call +1 307-299-2454.">
+    <meta name="keywords" content="auto repair Gillette WY, automotive repair Gillette, vehicle maintenance Gillette Wyoming, car repair Gillette WY, auto service Gillette Wyoming, Dad's Garage LLC">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            amber: '#f59e0b',
+                            amberHover: '#d97706',
+                            dark: '#0a0d14',
+                            card: '#141a23',
+                            cardBorder: '#263040',
+                            accent: '#1e293b',
+                            muted: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & Lucide Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0d14;
+            color: #f1f5f9;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(10, 13, 20, 0.85) 0%, rgba(10, 13, 20, 0.95) 100%),
+                        radial-gradient(circle at 50% 30%, rgba(245, 158, 11, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+        .glass-card {
+            background: rgba(20, 26, 35, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(10, 13, 20, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .carbon-pattern {
+            background-color: #0d1117;
+            background-image: radial-gradient(#263040 0.75px, transparent 0.75px), radial-gradient(#263040 0.75px, #0d1117 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .glow-amber:hover {
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+        }
+        /* Reveal animation utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-amber selection:text-black">
+
+    <!-- Top Bar Notice -->
+    <div class="bg-gradient-to-r from-amber-600 via-brand-amber to-amber-600 text-black text-xs font-bold py-2 px-4 text-center tracking-wide flex justify-center items-center gap-2">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+        <span>PROUDLY SERVING GILLETTE, WY & SURROUNDING AREAS • VISIT US AT 3500 BIRD DRIVE</span>
+        <a href="tel:+13072992454" class="underline ml-2 hover:text-white transition-colors flex items-center gap-1 font-extrabold">
+            <i data-lucide="phone" class="w-3 h-3"></i> (307) 299-2454
+        </a>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-gradient-to-br from-brand-amber to-amber-700 rounded-xl flex items-center justify-center text-black font-extrabold shadow-lg group-hover:scale-105 transition-transform">
+                        <i data-lucide="wrench" class="w-6 h-6 stroke-[2.5]"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-black tracking-wider text-white block uppercase font-heading leading-none">DAD'S GARAGE <span class="text-brand-amber">LLC</span></span>
+                        <span class="text-[10px] tracking-widest text-brand-muted uppercase block font-semibold mt-1">Auto Repair & Services</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-slate-200 hover:text-brand-amber transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-slate-200 hover:text-brand-amber transition-colors">About</a>
+                    <a href="#services" class="text-sm font-medium text-slate-200 hover:text-brand-amber transition-colors">Services</a>
+                    <a href="#why-us" class="text-sm font-medium text-slate-200 hover:text-brand-amber transition-colors">Why Choose Us</a>
+                    <a href="#testimonials" class="text-sm font-medium text-slate-200 hover:text-brand-amber transition-colors">Testimonials</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-200 hover:text-brand-amber transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="tel:+13072992454" class="bg-brand-amber hover:bg-brand-amberHover text-black font-bold px-5 py-2.5 rounded-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm shadow-md glow-amber">
+                        <i data-lucide="phone-call" class="w-4 h-4"></i>
+                        <span>CALL NOW</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden text-slate-200 hover:text-brand-amber p-2 focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-dark/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block py-2.5 px-3 text-base font-medium text-slate-200 hover:bg-slate-800/50 hover:text-brand-amber rounded-md">Home</a>
+            <a href="#about" class="mobile-link block py-2.5 px-3 text-base font-medium text-slate-200 hover:bg-slate-800/50 hover:text-brand-amber rounded-md">About</a>
+            <a href="#services" class="mobile-link block py-2.5 px-3 text-base font-medium text-slate-200 hover:bg-slate-800/50 hover:text-brand-amber rounded-md">Services</a>
+            <a href="#why-us" class="mobile-link block py-2.5 px-3 text-base font-medium text-slate-200 hover:bg-slate-800/50 hover:text-brand-amber rounded-md">Why Choose Us</a>
+            <a href="#testimonials" class="mobile-link block py-2.5 px-3 text-base font-medium text-slate-200 hover:bg-slate-800/50 hover:text-brand-amber rounded-md">Testimonials</a>
+            <a href="#contact" class="mobile-link block py-2.5 px-3 text-base font-medium text-slate-200 hover:bg-slate-800/50 hover:text-brand-amber rounded-md">Contact</a>
+            <div class="pt-2">
+                <a href="tel:+13072992454" class="w-full bg-brand-amber text-black font-bold py-3 rounded-lg flex items-center justify-center gap-2 text-center">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                    <span>CALL NOW: +1 307-299-2454</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center bg-cover bg-center overflow-hidden pt-12 pb-20" style="background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=2000&q=80');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 hero-overlay"></div>
+
+        <!-- Decorative Glow Elements -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-brand-amber/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <!-- SEO Tag & Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-brand-amber/30 text-brand-amber text-xs sm:text-sm font-semibold mb-6 tracking-wide animate-pulse">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>TRUSTED LOCAL AUTOMOTIVE SPECIALISTS IN GILLETTE, WY</span>
+            </div>
+
+            <!-- Main SEO H1 Headline -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-6 leading-tight max-w-4xl mx-auto font-heading">
+                Dependable Auto Repair in <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-brand-amber to-amber-200">Gillette, Wyoming</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                Professional automotive repair, diagnostic troubleshooting, and vehicle maintenance services — keeping your vehicle safe, reliable, and road-ready.
+            </p>
+
+            <!-- CTA Button Group -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 max-w-md mx-auto">
+                <a href="tel:+13072992454" class="w-full sm:w-auto bg-brand-amber hover:bg-brand-amberHover text-black text-base font-extrabold px-8 py-4 rounded-xl transition-all transform hover:-translate-y-1 shadow-xl flex items-center justify-center gap-3 glow-amber">
+                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    <span>CALL NOW</span>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto glass-card hover:bg-slate-800 text-white hover:text-brand-amber border border-slate-700 text-base font-bold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                    <span>REQUEST SERVICE</span>
+                </a>
+            </div>
+
+            <!-- Address Pill -->
+            <div class="inline-flex items-center gap-2 text-slate-400 text-sm font-medium bg-brand-dark/80 px-4 py-2 rounded-full border border-slate-800">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-amber"></i>
+                <span>3500 Bird Drive, Gillette, WY 82718</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="bg-brand-card border-y border-brand-cardBorder py-6 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex items-center justify-center gap-3">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-amber shrink-0"></i>
+                    <span class="text-sm sm:text-base font-semibold text-slate-200">Reliable Service</span>
+                </div>
+                <div class="flex items-center justify-center gap-3">
+                    <i data-lucide="wrench" class="w-5 h-5 text-brand-amber shrink-0"></i>
+                    <span class="text-sm sm:text-base font-semibold text-slate-200">Quality Workmanship</span>
+                </div>
+                <div class="flex items-center justify-center gap-3">
+                    <i data-lucide="heart-handshake" class="w-5 h-5 text-brand-amber shrink-0"></i>
+                    <span class="text-sm sm:text-base font-semibold text-slate-200">Honest Approach</span>
+                </div>
+                <div class="flex items-center justify-center gap-3">
+                    <i data-lucide="users" class="w-5 h-5 text-brand-amber shrink-0"></i>
+                    <span class="text-sm sm:text-base font-semibold text-slate-200">Customer Focused</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 lg:py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Text Content -->
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-2 text-brand-amber text-xs font-bold uppercase tracking-widest mb-3">
+                        <i data-lucide="tool" class="w-4 h-4"></i>
+                        <span>About Dad's Garage LLC</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6 uppercase tracking-tight font-heading">
+                        Local Service You Can Count On
+                    </h2>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                        <strong class="text-white">Dad’s Garage LLC</strong> is a locally based automotive service business in Gillette, Wyoming, dedicated to providing dependable vehicle repair, maintenance services, and quality pre-owned vehicle options.
+                    </p>
+                    <p class="text-slate-400 text-base leading-relaxed mb-8">
+                        We believe in treating every customer the way we would want to be treated — with honesty, respect, fair pricing, and meticulous workmanship. Whether you need urgent diagnostic troubleshooting, routine maintenance, or a trusted vehicle checkup, our team delivers straight talk and dependable results.
+                    </p>
+
+                    <!-- Features bullets -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-amber/10 flex items-center justify-center text-brand-amber">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-slate-200 font-medium text-sm">Locally Owned & Operated</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-amber/10 flex items-center justify-center text-brand-amber">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-slate-200 font-medium text-sm">Clear Diagnostic Explanations</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-amber/10 flex items-center justify-center text-brand-amber">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-slate-200 font-medium text-sm">Comprehensive Repairs</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-amber/10 flex items-center justify-center text-brand-amber">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-slate-200 font-medium text-sm">Dedicated Customer Care</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-flex items-center gap-3 bg-slate-800 hover:bg-slate-700 text-brand-amber font-bold px-6 py-3.5 rounded-lg transition-colors border border-slate-700">
+                        <span>Talk to Our Team</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Image Stack -->
+                <div class="relative reveal">
+                    <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80" alt="Professional mechanic performing automotive service in Gillette WY" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-xl border border-white/10 flex items-center justify-between">
+                            <div>
+                                <div class="text-xs text-brand-amber uppercase font-bold tracking-wider">Quality Assured</div>
+                                <div class="text-white font-bold text-sm">Gillette, Wyoming's Local Shop</div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xl font-extrabold text-white">3500</span>
+                                <span class="text-xs block text-slate-400">Bird Drive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 lg:py-28 bg-gradient-to-b from-brand-dark via-brand-card to-brand-dark relative border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center gap-2 text-brand-amber text-xs font-bold uppercase tracking-widest mb-3">
+                    <i data-lucide="cog" class="w-4 h-4"></i>
+                    <span>What We Offer</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight font-heading mb-4">
+                    Professional Automotive Services
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Practical, honest repair and maintenance solutions to keep your vehicle performing at its best through every Wyoming season.
+                </p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-brand-amber/50 transition-all duration-300 hover:-translate-y-1 group reveal">
+                    <div class="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700/80 flex items-center justify-center text-brand-amber mb-6 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+                        <i data-lucide="wrench" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-amber transition-colors">General Auto Repair</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Comprehensive mechanical repairs for cars, trucks, and SUVs. From steering and suspension fixes to component replacements.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Complete vehicle systems care</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Component repair & replacement</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-brand-amber/50 transition-all duration-300 hover:-translate-y-1 group reveal">
+                    <div class="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700/80 flex items-center justify-center text-brand-amber mb-6 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+                        <i data-lucide="gauge" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-amber transition-colors">Vehicle Maintenance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Keep your engine running smoothly with timely oil changes, fluid flushes, filter replacements, and seasonal checkups.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Oil & filter changes</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Fluid inspections & top-offs</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-brand-amber/50 transition-all duration-300 hover:-translate-y-1 group reveal">
+                    <div class="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700/80 flex items-center justify-center text-brand-amber mb-6 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+                        <i data-lucide="disc" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-amber transition-colors">Brake Service</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Ensure optimal stopping power and safety. We offer brake pad replacement, rotor resurfacing/replacement, and brake fluid service.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Pads, rotors & calipers</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Hydraulic line inspections</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-brand-amber/50 transition-all duration-300 hover:-translate-y-1 group reveal">
+                    <div class="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700/80 flex items-center justify-center text-brand-amber mb-6 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-amber transition-colors">Engine Diagnostics</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Is your check engine light on? Computerized diagnostic scanning to pinpoint exact issues quickly and accurately.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Check engine light analysis</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Electrical & sensor checks</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-brand-amber/50 transition-all duration-300 hover:-translate-y-1 group reveal">
+                    <div class="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700/80 flex items-center justify-center text-brand-amber mb-6 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+                        <i data-lucide="activity" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-amber transition-colors">Troubleshooting & Repairs</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Unusual noises, vibrations, or leaks? Experienced mechanics systematically isolate and eliminate difficult vehicle problems.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Noise & vibration isolation</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Leak identification & sealing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-brand-amber/50 transition-all duration-300 hover:-translate-y-1 group reveal">
+                    <div class="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl border border-slate-700/80 flex items-center justify-center text-brand-amber mb-6 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+                        <i data-lucide="shield" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-amber transition-colors">Preventive Maintenance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Protect your investment and prevent costly breakdowns with scheduled inspection, belt checks, and battery testing.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Battery & charging system tests</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-amber"></i> Belts, hoses & wiper replacement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service CTA Banner -->
+            <div class="mt-14 text-center">
+                <div class="inline-flex flex-col sm:flex-row items-center gap-4 p-6 glass-card rounded-2xl border border-slate-700/80">
+                    <span class="text-lg font-bold text-white">Need Auto Service or Repairs?</span>
+                    <a href="tel:+13072992454" class="bg-brand-amber hover:bg-brand-amberHover text-black font-extrabold px-6 py-3 rounded-xl transition-colors flex items-center gap-2 text-sm glow-amber">
+                        <i data-lucide="phone-call" class="w-4 h-4"></i>
+                        <span>Call +1 307-299-2454</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-us" class="py-20 lg:py-28 relative carbon-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center gap-2 text-brand-amber text-xs font-bold uppercase tracking-widest mb-3">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                    <span>The Dad's Garage Difference</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight font-heading mb-4">
+                    Why Choose Dad's Garage LLC?
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    We combine old-fashioned mechanics' integrity with clear modern communication to earn your trust on every visit.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-amber/40 transition-all reveal">
+                    <div class="w-12 h-12 bg-brand-amber/10 text-brand-amber rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">1. Honest Service</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Straightforward communication, upfront quotes, and a customer-first approach without unnecessary upsells.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-amber/40 transition-all reveal">
+                    <div class="w-12 h-12 bg-brand-amber/10 text-brand-amber rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="thumbs-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">2. Quality Workmanship</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Careful, professional work performed by skilled hands focused on safe, long-lasting, and dependable results.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-amber/40 transition-all reveal">
+                    <div class="w-12 h-12 bg-brand-amber/10 text-brand-amber rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">3. Local & Convenient</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Proudly serving vehicle owners throughout Gillette, Campbell County, and surrounding Wyoming communities.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-amber/40 transition-all reveal">
+                    <div class="w-12 h-12 bg-brand-amber/10 text-brand-amber rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="smile" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">4. Customer Focused</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        We work hard to make every customer feel respected, informed, and completely confident in our work.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trust Pillars Counter Strip -->
+            <div class="mt-16 bg-gradient-to-r from-slate-900 via-brand-card to-slate-900 border border-slate-800 rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-2xl sm:text-3xl font-black text-brand-amber font-heading">LOCAL</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Wyoming Service</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-black text-brand-amber font-heading">QUALITY</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Focused Repairs</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-black text-brand-amber font-heading">CUSTOMER</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">First Priority</div>
+                </div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-black text-brand-amber font-heading">DEPENDABLE</div>
+                    <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Workmanship</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-20 lg:py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center gap-2 text-brand-amber text-xs font-bold uppercase tracking-widest mb-3">
+                    <i data-lucide="star" class="w-4 h-4"></i>
+                    <span>Customer Feedback</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight font-heading mb-4">
+                    What Our Customers Say
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Real community experiences reflecting our commitment to quality service in Gillette.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative flex flex-col justify-between reveal">
+                    <div>
+                        <!-- Stars -->
+                        <div class="flex text-brand-amber mb-4 gap-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                        </div>
+                        <p class="text-slate-300 italic text-base leading-relaxed mb-6">
+                            "Great service and a straightforward experience. The team was helpful, professional, and easy to work with when my truck needed work."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <div>
+                            <div class="text-white font-bold text-sm">Gillette Resident</div>
+                            <div class="text-slate-500 text-xs">Customer Experience</div>
+                        </div>
+                        <i data-lucide="quote" class="w-8 h-8 text-slate-700"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative flex flex-col justify-between reveal">
+                    <div>
+                        <!-- Stars -->
+                        <div class="flex text-brand-amber mb-4 gap-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                        </div>
+                        <p class="text-slate-300 italic text-base leading-relaxed mb-6">
+                            "Honest communication and quality work. I appreciated how clearly everything was explained before any repair work was started."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <div>
+                            <div class="text-white font-bold text-sm">Local Vehicle Owner</div>
+                            <div class="text-slate-500 text-xs">Customer Experience</div>
+                        </div>
+                        <i data-lucide="quote" class="w-8 h-8 text-slate-700"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 relative flex flex-col justify-between reveal">
+                    <div>
+                        <!-- Stars -->
+                        <div class="flex text-brand-amber mb-4 gap-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-amber"></i>
+                        </div>
+                        <p class="text-slate-300 italic text-base leading-relaxed mb-6">
+                            "Reliable local service and friendly customer care. It's refreshing to have an auto shop in town you feel comfortable returning to."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <div>
+                            <div class="text-white font-bold text-sm">Satisfied Driver</div>
+                            <div class="text-slate-500 text-xs">Customer Experience</div>
+                        </div>
+                        <i data-lucide="quote" class="w-8 h-8 text-slate-700"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-6">
+                <span class="text-xs text-slate-500 italic">* Representative sample reviews showing local customer satisfaction goals for Dad's Garage LLC.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGH-IMPACT CTA BANNER -->
+    <section class="relative py-20 bg-cover bg-center overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=80');">
+        <div class="absolute inset-0 bg-brand-dark/90"></div>
+        <div class="relative max-w-5xl mx-auto px-4 text-center z-10">
+            <h2 class="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight font-heading mb-6">
+                Ready to Get Your Vehicle Back on the Road?
+            </h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+                Whether you need routine maintenance, diagnostic troubleshooting, or mechanical repair, Dad’s Garage LLC is here to help.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+13072992454" class="bg-brand-amber hover:bg-brand-amberHover text-black font-extrabold px-8 py-4 rounded-xl transition-all shadow-xl flex items-center justify-center gap-2 glow-amber">
+                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    <span>CALL NOW: +1 307-299-2454</span>
+                </a>
+                <a href="#contact" class="glass-card hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 border border-slate-700">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-brand-amber"></i>
+                    <span>GET DIRECTIONS</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contact" class="py-20 lg:py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center gap-2 text-brand-amber text-xs font-bold uppercase tracking-widest mb-3">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span>Get In Touch</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight font-heading mb-4">
+                    Let's Get Your Vehicle Taken Care Of
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Call us directly or send a message below to request service or make an inquiry.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- LEFT: Contact Cards -->
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <!-- Phone Card -->
+                    <a href="tel:+13072992454" class="block bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-amber/50 transition-all group">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-amber/10 rounded-xl flex items-center justify-center text-brand-amber shrink-0 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-brand-muted uppercase font-bold tracking-wider">Phone</div>
+                                <div class="text-xl font-bold text-white group-hover:text-brand-amber transition-colors mt-0.5">+1 307-299-2454</div>
+                                <div class="text-xs text-slate-500 mt-1">Click to call directly on mobile</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Email Card -->
+                    <a href="mailto:tbarber8675309@gmail.com" class="block bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-amber/50 transition-all group">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-amber/10 rounded-xl flex items-center justify-center text-brand-amber shrink-0 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-brand-muted uppercase font-bold tracking-wider">Email</div>
+                                <div class="text-base font-bold text-white group-hover:text-brand-amber transition-colors mt-0.5 break-all">tbarber8675309@gmail.com</div>
+                                <div class="text-xs text-slate-500 mt-1">Send us an email anytime</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Address Card -->
+                    <div class="bg-brand-card p-6 rounded-2xl border border-slate-800">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-amber/10 rounded-xl flex items-center justify-center text-brand-amber shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-brand-muted uppercase font-bold tracking-wider">Location</div>
+                                <div class="text-base font-bold text-white mt-0.5">3500 Bird Drive</div>
+                                <div class="text-slate-400 text-sm">Gillette, WY 82718, United States</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facebook Card -->
+                    <a href="https://www.facebook.com/profile.php?id=100046422884010" target="_blank" rel="noopener noreferrer" class="block bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-all group">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center text-blue-500 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <i data-lucide="facebook" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-brand-muted uppercase font-bold tracking-wider">Facebook</div>
+                                <div class="text-base font-bold text-white group-hover:text-blue-400 transition-colors mt-0.5">Dad's Garage LLC on Facebook</div>
+                                <div class="text-xs text-slate-500 mt-1">Follow our official page</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- RIGHT: Request Service Form -->
+                <div class="lg:col-span-7 reveal">
+                    <div class="glass-card p-8 rounded-2xl border border-slate-800">
+                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2 font-heading">
+                            <i data-lucide="file-text" class="w-5 h-5 text-brand-amber"></i>
+                            <span>Request Service / Inquiry Form</span>
+                        </h3>
+
+                        <form id="serviceForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="fullName" class="block text-xs font-medium text-slate-300 mb-1.5 uppercase tracking-wide">Your Name *</label>
+                                    <input type="text" id="fullName" required placeholder="John Doe" class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-amber transition-colors">
+                                </div>
+                                <div>
+                                    <label for="phoneNum" class="block text-xs font-medium text-slate-300 mb-1.5 uppercase tracking-wide">Phone Number *</label>
+                                    <input type="tel" id="phoneNum" required placeholder="(307) 000-0000" class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-amber transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="emailAddr" class="block text-xs font-medium text-slate-300 mb-1.5 uppercase tracking-wide">Email Address</label>
+                                    <input type="email" id="emailAddr" placeholder="name@example.com" class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-amber transition-colors">
+                                </div>
+                                <div>
+                                    <label for="vehicleInfo" class="block text-xs font-medium text-slate-300 mb-1.5 uppercase tracking-wide">Vehicle Details *</label>
+                                    <input type="text" id="vehicleInfo" required placeholder="e.g. 2018 Ford F-150" class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-amber transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="serviceNeeded" class="block text-xs font-medium text-slate-300 mb-1.5 uppercase tracking-wide">Service Needed *</label>
+                                <select id="serviceNeeded" required class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-amber transition-colors">
+                                    <option value="" disabled selected>Select service type...</option>
+                                    <option value="General Repair">General Auto Repair</option>
+                                    <option value="Maintenance">Vehicle Maintenance / Oil Service</option>
+                                    <option value="Brakes">Brake Service</option>
+                                    <option value="Diagnostics">Engine Diagnostics / Light On</option>
+                                    <option value="Troubleshooting">Troubleshooting & Noise</option>
+                                    <option value="Used Vehicle Inquiry">Used Vehicle Inquiry</option>
+                                    <option value="Other">Other Request</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="messageText" class="block text-xs font-medium text-slate-300 mb-1.5 uppercase tracking-wide">Message / Details</label>
+                                <textarea id="messageText" rows="4" placeholder="Describe the symptoms or questions you have..." class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-amber transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-amber hover:bg-brand-amberHover text-black font-extrabold py-4 rounded-xl transition-all flex items-center justify-center gap-2 text-base glow-amber shadow-lg">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                                <span>SUBMIT REQUEST</span>
+                            </button>
+                        </form>
+
+                        <div id="formSuccessMessage" class="hidden mt-4 p-4 bg-emerald-950/80 border border-emerald-600/50 rounded-lg text-emerald-200 text-sm text-center">
+                            Thank you! Your service request has been prepared. You can also call us directly at <strong>+1 307-299-2454</strong> for immediate service!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EMBEDDED GOOGLE MAP LOCATION -->
+            <div class="mt-16 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl reveal">
+                <div class="bg-brand-card p-4 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-white font-bold text-sm">
+                        <i data-lucide="map-pin" class="text-brand-amber w-4 h-4"></i>
+                        <span>Dad's Garage LLC — 3500 Bird Drive, Gillette, WY 82718</span>
+                    </div>
+                    <a href="https://maps.google.com/?q=3500+Bird+Drive+Gillette+WY+82718" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-amber hover:underline flex items-center gap-1 font-semibold">
+                        Open in Google Maps <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                </div>
+                <div class="w-full h-80 bg-slate-900">
+                    <iframe 
+                        title="Dad's Garage LLC Location Map" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2836.7320087790273!2d-105.4746!3d44.2750!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x533320cbe8502fb1%3A0x6b41cb8ebcb0338f!2s3500%20Bird%20Dr%2C%20Gillette%2C%20WY%2082718!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(0.8) contrast(1.2) opacity(0.9);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CALL OUT BANNER -->
+    <div class="bg-gradient-to-r from-amber-600 via-brand-amber to-amber-600 py-10 px-4 text-black text-center">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <h2 class="text-2xl sm:text-3xl font-black uppercase font-heading">Need Reliable Auto Service in Gillette?</h2>
+            <p class="font-medium text-slate-900 text-base max-w-xl mx-auto">
+                Call Dad's Garage LLC today and let's get your vehicle taken care of with honest, quality service.
+            </p>
+            <div>
+                <a href="tel:+13072992454" class="inline-flex items-center gap-3 bg-black hover:bg-slate-900 text-white font-extrabold px-8 py-4 rounded-xl shadow-2xl transition-transform hover:scale-105">
+                    <i data-lucide="phone-call" class="w-5 h-5 text-brand-amber"></i>
+                    <span>CALL +1 307-299-2454</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-slate-800 text-slate-400 text-sm py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-amber rounded-lg flex items-center justify-center text-black font-extrabold">
+                            <i data-lucide="wrench" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-black text-white uppercase font-heading">DAD'S GARAGE <span class="text-brand-amber">LLC</span></span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Dependable Auto Repair & Vehicle Service in Gillette, Wyoming. Quality workmanship and honest customer care.
+                    </p>
+                    <div class="text-xs font-semibold text-brand-amber">
+                        Auto Repair & Vehicle Service in Gillette, Wyoming
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 font-heading uppercase tracking-wide">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#home" class="hover:text-brand-amber transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-amber transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-amber transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="hover:text-brand-amber transition-colors">Why Choose Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-brand-amber transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-brand-amber transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services List -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 font-heading uppercase tracking-wide">Our Services</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><span class="hover:text-white transition-colors">General Auto Repair</span></li>
+                        <li><span class="hover:text-white transition-colors">Vehicle Maintenance</span></li>
+                        <li><span class="hover:text-white transition-colors">Brake Service</span></li>
+                        <li><span class="hover:text-white transition-colors">Engine Diagnostics</span></li>
+                        <li><span class="hover:text-white transition-colors">Troubleshooting & Repairs</span></li>
+                        <li><span class="hover:text-white transition-colors">Preventive Maintenance</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact details -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 font-heading uppercase tracking-wide">Contact Details</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-amber shrink-0 mt-0.5"></i>
+                            <span>3500 Bird Drive, Gillette, WY 82718</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-amber shrink-0"></i>
+                            <a href="tel:+13072992454" class="hover:text-brand-amber transition-colors">+1 307-299-2454</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-amber shrink-0"></i>
+                            <a href="mailto:tbarber8675309@gmail.com" class="hover:text-brand-amber transition-colors break-all">tbarber8675309@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-2 pt-2">
+                            <a href="https://www.facebook.com/profile.php?id=100046422884010" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-blue-600 text-white p-2 rounded-lg transition-colors inline-flex items-center gap-2 text-xs">
+                                <i data-lucide="facebook" class="w-4 h-4"></i>
+                                <span>Facebook Page</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Line -->
+            <div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div>
+                    © 2026 Dad’s Garage LLC. All Rights Reserved.
+                </div>
+                <div>
+                    Professional Auto Repair & Vehicle Service • Gillette, Wyoming
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR INTERACTION & REVEAL -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Sticky Navbar Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('glass-nav', 'shadow-2xl');
+            } else {
+                header.classList.remove('glass-nav', 'shadow-2xl');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Reveal Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form Submit Handler Mockup
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('formSuccessMessage');
+            const form = document.getElementById('serviceForm');
+            
+            successMsg.classList.remove('hidden');
+            form.reset();
+
+            setTimeout(() => {
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
